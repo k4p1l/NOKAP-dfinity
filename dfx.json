@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "Nuggets_backend": {
+      "main": "src/Nuggets_backend/main.mo",
+      "type": "motoko"
+    },
+    "Nuggets_frontend": {
+      "dependencies": [
+        "Nuggets_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/Nuggets_frontend/src/index.html"
+      },
+      "source": [
+        "src/Nuggets_frontend/assets",
+        "dist/Nuggets_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
