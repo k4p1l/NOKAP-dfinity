@@ -1,0 +1,10 @@
+type Post = 
+ record {
+   fact: text;
+   id: text;
+   source: text;
+ };
+service : {
+  addPost: (text, text) -> () oneway;
+  getPosts: () -> (vec Post) query;
+}
