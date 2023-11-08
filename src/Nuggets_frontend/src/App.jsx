@@ -5,11 +5,15 @@ import React, { useEffect, useState } from "react"
 function App() {
   const [showForm, setShowForm] = useState(false);
   return (
+    <>
     <div className="container">
       <Header showForm={showForm} setShowForm={setShowForm} />
-      <FactForm />
+      {/* <FactForm /> */}
+      {!showForm ? ("") : (<FactForm/>)}
       <Facts />
     </div>
+    </>
+    
   );
 }
 
@@ -29,6 +33,8 @@ function Header({ showForm, setShowForm }) {
 }
 
 function FactForm() {
+  const [fact, setFact] = useState('')
+  var textLength = fact.length;
 //   const [counter] = useCanister("counter");
   const onSubmit = async () => {
     let a = document.getElementById("fact");
@@ -46,8 +52,9 @@ function FactForm() {
         id="fact"
         type="text"
         placeholder="Share a fact that you learned mate"
+        onChange={(e) => setFact(e.target.value)}
       />
-      <span>400</span>
+      <span>{400 - textLength}</span>
       <input id="source" type="text" placeholder="Trustworthy source" />
       <button onClick={onSubmit} className="postbtn">
         Post

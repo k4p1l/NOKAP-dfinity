@@ -97,7 +97,10 @@ h1 {
   align-items: center;
   gap: 16px;
   justify-content: center;
+  transition: opacity 0.3s ease-in-out;
 }
+
+
 
 .factform input {
   background-color: #ff6969;
@@ -130,10 +133,12 @@ h1 {
 }
 
 .factform span {
+  width: 5%;
   font-size: 30px;
   font-family: up;
   color:aliceblue;
   margin-right: 20px;
+  text-align:center;
 }
 
 .postbtn {
