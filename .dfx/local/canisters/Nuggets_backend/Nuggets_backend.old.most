@@ -3,5 +3,6 @@ type List<T> = ?(T, List<T>);
 type Post = {fact : Text; id : Text; source : Text};
 actor {
   stable var idCount : Nat;
+  stable var likeCount : Int;
   stable var posts : ?(Post, List<Post>)
 };

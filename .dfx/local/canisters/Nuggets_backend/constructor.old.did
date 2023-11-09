@@ -6,5 +6,7 @@ type Post =
  };
 service : {
   addPost: (text, text) -> () oneway;
+  authUser: (text, text) -> (text);
   getPosts: () -> (vec Post) query;
+  like: () -> (int) query;
 }

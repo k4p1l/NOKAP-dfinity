@@ -1,19 +1,36 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { Nuggets_backend } from "../../declarations/Nuggets_backend";
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react";
+import logo from "../../Nuggets_frontend/assets/logo.png"
+import { Login } from "./Login";
+import {Loader} from "./Loader"
 
 function App() {
+  // const [showForm, setShowForm] = useState(false);
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/main" element={<MainPage />} />
+        <Route path="/loader" element={<Loader/>}/>
+      </Routes>
+    </Router>
+  );
+}
+
+
+function MainPage() {
   const [showForm, setShowForm] = useState(false);
   return (
     <>
-    <div className="container">
-      <Header showForm={showForm} setShowForm={setShowForm} />
-      {/* <FactForm /> */}
-      {!showForm ? ("") : (<FactForm/>)}
-      <Facts />
-    </div>
+      <div className="container">
+        <Header showForm={showForm} setShowForm={setShowForm} />
+        {/* <FactForm /> */}
+        {!showForm ? "" : <FactForm />}
+        <Facts />
+      </div>
     </>
-    
   );
 }
 
@@ -21,7 +38,7 @@ function Header({ showForm, setShowForm }) {
   return (
     <header className="header">
       <div className="logo">
-        {/* <img src={logo} alt="NOKAP" /> */}
+        <img src={logo} alt="NOKAP" />
         <h1>Nuggets of Knowledge</h1>
       </div>
 
@@ -33,18 +50,17 @@ function Header({ showForm, setShowForm }) {
 }
 
 function FactForm() {
-  const [fact, setFact] = useState('')
+  const nav = useNavigate();
+  // const history = useHistory()
+  const [fact, setFact] = useState("");
   var textLength = fact.length;
-//   const [counter] = useCanister("counter");
+  //   const [counter] = useCanister("counter");
   const onSubmit = async () => {
     let a = document.getElementById("fact");
     let b = document.getElementById("source");
 
     await Nuggets_backend.addPost(a.value, b.value);
-
-    setTimeout(() => {
-      window.location.reload(false);
-    }, 3000);
+    nav("/main");
   };
   return (
     <form className="factform">
@@ -56,19 +72,23 @@ function FactForm() {
       />
       <span>{400 - textLength}</span>
       <input id="source" type="text" placeholder="Trustworthy source" />
-      <button onClick={onSubmit} className="postbtn">
-        Post
-      </button>
+      <Link to="/loader">
+        <button onClick={onSubmit} className="postbtn">
+          Post
+        </button>
+      </Link>
     </form>
   );
 }
 
 function Facts() {
-//   const [counter] = useCanister("counter");
+  //   const [counter] = useCanister("counter");
   const [data, setData] = useState([]);
+  const [like, setLike] = useState();
 
   useEffect(() => {
     fetchData();
+    onLike();
   }, []);
 
   const fetchData = async () => {
@@ -79,6 +99,17 @@ function Facts() {
       console.log(e);
     }
   };
+
+  const onLike = async () => {
+    try {
+      const res = await Nuggets_backend.like();
+      console.log(res);
+      setLike(res.toString());
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   const post = data.map((a) => (
     <>
       <li className="fact">
@@ -88,13 +119,13 @@ function Facts() {
         </a>
         <div className="votebuttons">
           <button>
-            👍 <strong>24</strong>
+            👍 <strong>{like}</strong>
           </button>
           <button>
-            🤯 <strong>9</strong>
+            🤯 <strong>2</strong>
           </button>
           <button>
-            ⛔️ <strong>4</strong>
+            ⛔️ <strong>1</strong>
           </button>
         </div>
       </li>

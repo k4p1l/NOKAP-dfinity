@@ -9,6 +9,11 @@
   font-family: up;
   src: url(./fonts/upheavtt.otf);
 }
+
+@font-face {
+  font-family: milli;
+  src: url(./fonts/Fontspring-DEMO-milligrammacro-heavy.otf);
+}
 /* @font-face {
   font-family: GT;
   src: url(./fonts/GT-America-Mono-Black-Trial.otf) format("opentype");
@@ -39,7 +44,7 @@ body {
 }
 
 h1 {
-  font-size: 42px;
+  font-size: 45px;
   text-transform: uppercase;
   text-align: center;
   font-family: BLKND;
