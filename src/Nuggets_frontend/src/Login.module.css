@@ -70,7 +70,7 @@ body {
   margin-top: 36px;
   font-size: 30px;
   border: 3px solid var(--onyx-0, #000);
-  background: var(--alabaster-100, #fff);
+  background:#fff5e0;
   box-shadow: 2px 2px 0px 0px #000;
 }
 
@@ -103,8 +103,3 @@ body {
   background-color: #be1e1e;
   color: aliceblue;
 }
-
-/* .sign:active {
-  
-  
-} */

@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import lf from "./Login.module.css";
-// import { useCanister } from "@connect2ic/react"
 import { Nuggets_backend } from "../../declarations/Nuggets_backend";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
+import { Loader } from "./Loader";
 
 const Login = () => {
-  // const [user, setUser] = useState('');
-  // const [pass, setPass] = useState('');
   const Nav = useNavigate();
 
   const onSubmit = async () => {
@@ -15,8 +13,9 @@ const Login = () => {
 
     var userNm = u.value;
     var userPass = p.value;
-
+   
     const res = await Nuggets_backend.authUser(userNm, userPass);
+    
 
     if (res === "exists") {
       Nav("/main");
@@ -25,6 +24,7 @@ const Login = () => {
     }
   };
   return (
+  <>
     <div className={lf.container}>
       <div className={lf.header}>
         <span className={lf.crm}>Nuggets Of Knowledge</span>
@@ -45,12 +45,17 @@ const Login = () => {
           id="password"
           type="password"
           placeholder="🔒 Password"
-        />
-        <button className={lf.sign} onClick={onSubmit}>
+          />
+          <center>
+          <Link to="./loader">
+          <button className={lf.sign} onClick={onSubmit}>
           Sign In
-        </button>
+            </button>
+          </Link></center>
+        
       </div>
     </div>
+    </>
   );
 };
 
