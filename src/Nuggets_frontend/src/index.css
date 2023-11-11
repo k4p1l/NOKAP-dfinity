@@ -31,7 +31,6 @@
 
 body {
   background-color: #be1e1e;
-  
 }
 
 .container {
@@ -89,7 +88,7 @@ h1 {
 }
 
 .sharebtn:hover {
-  background-color:#be1e1e;
+  background-color: #be1e1e;
   color: aliceblue;
   transform: scale(96%);
 }
@@ -104,8 +103,6 @@ h1 {
   justify-content: center;
   transition: opacity 0.3s ease-in-out;
 }
-
-
 
 .factform input {
   background-color: #ff6969;
@@ -141,9 +138,9 @@ h1 {
   width: 5%;
   font-size: 30px;
   font-family: up;
-  color:aliceblue;
+  color: aliceblue;
   margin-right: 20px;
-  text-align:center;
+  text-align: center;
 }
 
 .postbtn {
@@ -163,7 +160,7 @@ h1 {
 
 .postbtn:hover {
   transform: scale(94%);
-  background-color:#be1e1e;
+  background-color: #be1e1e;
   color: aliceblue;
 }
 .postbtn:active {
@@ -200,7 +197,7 @@ ul {
   letter-spacing: -0.25px;
 }
 
-.fact :first-child{
+.fact :first-child {
   flex-grow: 1;
 }
 
@@ -211,7 +208,104 @@ ul {
   gap: 8px;
 }
 
-.votebuttons button {
+/* .votebuttons button {
+  border: #162356 solid;
+  background-color: aliceblue;
+  font-size: 14px;
+  padding: 5px;
+  padding-bottom: 8px;
+  border-radius: 30px;
+  color: #162356;
+  font-family: up;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.25s;
+} */
+.like:hover {
+  background-color: #162356;
+  color: #ffe627;
+  transform: scale(90%);
+  border: #ffe627 solid;
+}
+
+.likeActive {
+  border: #ffe627 solid;
+  background-color: #162356;
+  font-size: 14px;
+  padding: 5px;
+  padding-bottom: 8px;
+  border-radius: 30px;
+  color: #ffe627;
+  font-family: up;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.like {
+  border: #162356 solid;
+  background-color: aliceblue;
+  font-size: 14px;
+  padding: 5px;
+  padding-bottom: 8px;
+  border-radius: 30px;
+  color: #162356;
+  font-family: up;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.25s ease-out;
+}
+
+.mindActive {
+  border: #ffe627 solid;
+  background-color: #162356;
+  font-size: 14px;
+  padding: 5px;
+  padding-bottom: 8px;
+  border-radius: 30px;
+  color: #ffe627;
+  font-family: up;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.25s ease-out;
+}
+
+.mind {
+  border: #162356 solid;
+  background-color: aliceblue;
+  font-size: 14px;
+  padding: 5px;
+  padding-bottom: 8px;
+  border-radius: 30px;
+  color: #162356;
+  font-family: up;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.25s ease-out;
+}
+
+.mind:hover {
+  background-color: #162356;
+  color: #ffe627;
+  transform: scale(90%);
+  border: #ffe627 solid;
+}
+
+.revokeActive {
+  border: #ffe627 solid;
+  background-color: #162356;
+  font-size: 14px;
+  padding: 5px;
+  padding-bottom: 8px;
+  border-radius: 30px;
+  color: #ffe627;
+  font-family: up;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.revoke {
   border: #162356 solid;
   background-color: aliceblue;
   font-size: 14px;
@@ -224,10 +318,11 @@ ul {
   cursor: pointer;
   transition: 0.25s;
 }
-.votebuttons button:hover {
+
+.revoke:hover {
   background-color: #162356;
   color: #ffe627;
-  transform: scale(95%);
+  transform: scale(90%);
   border: #ffe627 solid;
 }
 

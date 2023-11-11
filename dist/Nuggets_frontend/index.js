@@ -20681,7 +20681,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@font-face {
 
 body {
   background-color: #be1e1e;
-  
 }
 
 .container {
@@ -20739,7 +20738,7 @@ h1 {
 }
 
 .sharebtn:hover {
-  background-color:#be1e1e;
+  background-color: #be1e1e;
   color: aliceblue;
   transform: scale(96%);
 }
@@ -20754,8 +20753,6 @@ h1 {
   justify-content: center;
   transition: opacity 0.3s ease-in-out;
 }
-
-
 
 .factform input {
   background-color: #ff6969;
@@ -20791,9 +20788,9 @@ h1 {
   width: 5%;
   font-size: 30px;
   font-family: up;
-  color:aliceblue;
+  color: aliceblue;
   margin-right: 20px;
-  text-align:center;
+  text-align: center;
 }
 
 .postbtn {
@@ -20813,7 +20810,7 @@ h1 {
 
 .postbtn:hover {
   transform: scale(94%);
-  background-color:#be1e1e;
+  background-color: #be1e1e;
   color: aliceblue;
 }
 .postbtn:active {
@@ -20850,7 +20847,7 @@ ul {
   letter-spacing: -0.25px;
 }
 
-.fact :first-child{
+.fact :first-child {
   flex-grow: 1;
 }
 
@@ -20861,7 +20858,104 @@ ul {
   gap: 8px;
 }
 
-.votebuttons button {
+/* .votebuttons button {
+  border: #162356 solid;
+  background-color: aliceblue;
+  font-size: 14px;
+  padding: 5px;
+  padding-bottom: 8px;
+  border-radius: 30px;
+  color: #162356;
+  font-family: up;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.25s;
+} */
+.like:hover {
+  background-color: #162356;
+  color: #ffe627;
+  transform: scale(90%);
+  border: #ffe627 solid;
+}
+
+.likeActive {
+  border: #ffe627 solid;
+  background-color: #162356;
+  font-size: 14px;
+  padding: 5px;
+  padding-bottom: 8px;
+  border-radius: 30px;
+  color: #ffe627;
+  font-family: up;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.like {
+  border: #162356 solid;
+  background-color: aliceblue;
+  font-size: 14px;
+  padding: 5px;
+  padding-bottom: 8px;
+  border-radius: 30px;
+  color: #162356;
+  font-family: up;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.25s ease-out;
+}
+
+.mindActive {
+  border: #ffe627 solid;
+  background-color: #162356;
+  font-size: 14px;
+  padding: 5px;
+  padding-bottom: 8px;
+  border-radius: 30px;
+  color: #ffe627;
+  font-family: up;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.25s ease-out;
+}
+
+.mind {
+  border: #162356 solid;
+  background-color: aliceblue;
+  font-size: 14px;
+  padding: 5px;
+  padding-bottom: 8px;
+  border-radius: 30px;
+  color: #162356;
+  font-family: up;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.25s ease-out;
+}
+
+.mind:hover {
+  background-color: #162356;
+  color: #ffe627;
+  transform: scale(90%);
+  border: #ffe627 solid;
+}
+
+.revokeActive {
+  border: #ffe627 solid;
+  background-color: #162356;
+  font-size: 14px;
+  padding: 5px;
+  padding-bottom: 8px;
+  border-radius: 30px;
+  color: #ffe627;
+  font-family: up;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.revoke {
   border: #162356 solid;
   background-color: aliceblue;
   font-size: 14px;
@@ -20874,10 +20968,11 @@ ul {
   cursor: pointer;
   transition: 0.25s;
 }
-.votebuttons button:hover {
+
+.revoke:hover {
   background-color: #162356;
   color: #ffe627;
-  transform: scale(95%);
+  transform: scale(90%);
   border: #ffe627 solid;
 }
 
@@ -20903,7 +20998,7 @@ ul {
 .source:active {
   color: azure;
 }
-`, "",{"version":3,"sources":["webpack://./src/Nuggets_frontend/src/index.css"],"names":[],"mappings":"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","sourcesContent":["@import url(\"https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700;800&family=Staatliches&display=swap\");\n\n@font-face {\n  font-family: BLKND;\n  src: url(./fonts/BLKND-SANS.otf);\n}\n\n@font-face {\n  font-family: up;\n  src: url(./fonts/upheavtt.otf);\n}\n\n@font-face {\n  font-family: milli;\n  src: url(./fonts/Fontspring-DEMO-milligrammacro-heavy.otf);\n}\n/* @font-face {\n  font-family: GT;\n  src: url(./fonts/GT-America-Mono-Black-Trial.otf) format(\"opentype\");\n}\n@font-face {\n  font-family: up;\n  src: url(./fonts/PartitaPersonalUsed.otf) format(\"opentype\");\n} */\n\n* {\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n}\n\nbody {\n  background-color: #be1e1e;\n  \n}\n\n.container {\n  background-color: #fff5e0;\n  border-radius: 80px;\n  /* width: 100%; */\n  height: 100%;\n  margin: 0 auto;\n  padding: 0px;\n}\n\nh1 {\n  font-size: 45px;\n  text-transform: uppercase;\n  text-align: center;\n  font-family: BLKND;\n  font-weight: lighter;\n  color: #be1e1e;\n}\n.header {\n  margin-bottom: 5px;\n  padding: 10px;\n  display: flex;\n  align-items: center; /* vertically*/\n  justify-content: space-between; /* horizontally*/\n  /* margin-top: 10px; */\n}\n\n.logo {\n  display: flex;\n  align-items: center;\n  justify-content: spacebetween;\n  gap: 30px;\n  margin-left: 30px;\n}\n\n.logo img {\n  width: 72px;\n  height: 72px;\n}\n\n.sharebtn {\n  border: #162356 solid;\n  font-family: up;\n  /* font-weight: 800; */\n  line-height: 1;\n  font-size: 24px;\n  padding: 16px;\n  background-color: #fff5e0;\n  border-radius: 30px;\n  margin-right: 30px;\n  transition: 0.2s ease-out;\n  cursor: pointer;\n  color: #162356;\n}\n\n.sharebtn:hover {\n  background-color:#be1e1e;\n  color: aliceblue;\n  transform: scale(96%);\n}\n\n.factform {\n  background-color: #be1e1e;\n  padding: 20px;\n  border-radius: 50px;\n  display: flex;\n  align-items: center;\n  gap: 16px;\n  justify-content: center;\n  transition: opacity 0.3s ease-in-out;\n}\n\n\n\n.factform input {\n  background-color: #ff6969;\n  padding: 16px;\n  border: none;\n  border-radius: 30px;\n  color: aliceblue;\n  font-family: up;\n  font-size: 20px;\n\n  transition: 0.2s ease-out;\n}\n\n.factform input:hover {\n  box-shadow: 0px 0px 0px 0px #000;\n}\n.factform input:focus {\n  outline-style: none;\n  box-shadow: none;\n}\n\n.factform input:first-child {\n  flex-grow: 1;\n}\n\n.factform input::placeholder {\n  color: aliceblue;\n  font-size: 20px;\n  font-family: up;\n}\n\n.factform span {\n  width: 5%;\n  font-size: 30px;\n  font-family: up;\n  color:aliceblue;\n  margin-right: 20px;\n  text-align:center;\n}\n\n.postbtn {\n  border: none;\n  font-family: up;\n  line-height: 1;\n  padding: 10px 0 10px;\n  background-color: #fff5e0;\n  border-radius: 30px;\n  transition: 0.2s ease-out;\n  cursor: pointer;\n  color: #162356;\n  margin: 20px;\n  padding: 12px;\n  font-size: 20px;\n}\n\n.postbtn:hover {\n  transform: scale(94%);\n  background-color:#be1e1e;\n  color: aliceblue;\n}\n.postbtn:active {\n  background-color: #c6f806;\n  transform: scale(90%);\n}\n\n.main {\n  display: grid;\n  gap: 40px;\n  margin-right: 20px;\n  margin-left: 20px;\n  /* height: 90vh; */\n  padding: 40px;\n}\n\nul {\n  list-style: none;\n}\n\n.fact {\n  font-size: 20px;\n  line-height: 1.4;\n  font-family: up;\n  /* font-weight: bold; */\n  color: #162356;\n  background-color: #ff6969;\n  margin-bottom: 20px;\n  border-radius: 30px;\n  padding: 8px 24px; /* vertical horizontal*/\n  display: flex;\n  align-items: center;\n  gap: 24px;\n  letter-spacing: -0.25px;\n}\n\n.fact :first-child{\n  flex-grow: 1;\n}\n\n.votebuttons {\n  margin-left: auto;\n  display: flex;\n  flex-shrink: 0;\n  gap: 8px;\n}\n\n.votebuttons button {\n  border: #162356 solid;\n  background-color: aliceblue;\n  font-size: 14px;\n  padding: 5px;\n  padding-bottom: 8px;\n  border-radius: 30px;\n  color: #162356;\n  font-family: up;\n  letter-spacing: 1px;\n  cursor: pointer;\n  transition: 0.25s;\n}\n.votebuttons button:hover {\n  background-color: #162356;\n  color: #ffe627;\n  transform: scale(95%);\n  border: #ffe627 solid;\n}\n\n.votebuttons button:disabled {\n  background-color: aliceblue;\n  color: #162356;\n  border: #162356 solid;\n  transform: scale(100%);\n}\n\n.source:link {\n  color: aliceblue;\n  text-decoration: none;\n  margin-left: 12px;\n  transition: 0.4s;\n}\n.source:visited {\n  color: purple;\n}\n.source:hover {\n  color: #ffe627;\n}\n.source:active {\n  color: azure;\n}\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/Nuggets_frontend/src/index.css"],"names":[],"mappings":"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","sourcesContent":["@import url(\"https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700;800&family=Staatliches&display=swap\");\n\n@font-face {\n  font-family: BLKND;\n  src: url(./fonts/BLKND-SANS.otf);\n}\n\n@font-face {\n  font-family: up;\n  src: url(./fonts/upheavtt.otf);\n}\n\n@font-face {\n  font-family: milli;\n  src: url(./fonts/Fontspring-DEMO-milligrammacro-heavy.otf);\n}\n/* @font-face {\n  font-family: GT;\n  src: url(./fonts/GT-America-Mono-Black-Trial.otf) format(\"opentype\");\n}\n@font-face {\n  font-family: up;\n  src: url(./fonts/PartitaPersonalUsed.otf) format(\"opentype\");\n} */\n\n* {\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n}\n\nbody {\n  background-color: #be1e1e;\n}\n\n.container {\n  background-color: #fff5e0;\n  border-radius: 80px;\n  /* width: 100%; */\n  height: 100%;\n  margin: 0 auto;\n  padding: 0px;\n}\n\nh1 {\n  font-size: 45px;\n  text-transform: uppercase;\n  text-align: center;\n  font-family: BLKND;\n  font-weight: lighter;\n  color: #be1e1e;\n}\n.header {\n  margin-bottom: 5px;\n  padding: 10px;\n  display: flex;\n  align-items: center; /* vertically*/\n  justify-content: space-between; /* horizontally*/\n  /* margin-top: 10px; */\n}\n\n.logo {\n  display: flex;\n  align-items: center;\n  justify-content: spacebetween;\n  gap: 30px;\n  margin-left: 30px;\n}\n\n.logo img {\n  width: 72px;\n  height: 72px;\n}\n\n.sharebtn {\n  border: #162356 solid;\n  font-family: up;\n  /* font-weight: 800; */\n  line-height: 1;\n  font-size: 24px;\n  padding: 16px;\n  background-color: #fff5e0;\n  border-radius: 30px;\n  margin-right: 30px;\n  transition: 0.2s ease-out;\n  cursor: pointer;\n  color: #162356;\n}\n\n.sharebtn:hover {\n  background-color: #be1e1e;\n  color: aliceblue;\n  transform: scale(96%);\n}\n\n.factform {\n  background-color: #be1e1e;\n  padding: 20px;\n  border-radius: 50px;\n  display: flex;\n  align-items: center;\n  gap: 16px;\n  justify-content: center;\n  transition: opacity 0.3s ease-in-out;\n}\n\n.factform input {\n  background-color: #ff6969;\n  padding: 16px;\n  border: none;\n  border-radius: 30px;\n  color: aliceblue;\n  font-family: up;\n  font-size: 20px;\n\n  transition: 0.2s ease-out;\n}\n\n.factform input:hover {\n  box-shadow: 0px 0px 0px 0px #000;\n}\n.factform input:focus {\n  outline-style: none;\n  box-shadow: none;\n}\n\n.factform input:first-child {\n  flex-grow: 1;\n}\n\n.factform input::placeholder {\n  color: aliceblue;\n  font-size: 20px;\n  font-family: up;\n}\n\n.factform span {\n  width: 5%;\n  font-size: 30px;\n  font-family: up;\n  color: aliceblue;\n  margin-right: 20px;\n  text-align: center;\n}\n\n.postbtn {\n  border: none;\n  font-family: up;\n  line-height: 1;\n  padding: 10px 0 10px;\n  background-color: #fff5e0;\n  border-radius: 30px;\n  transition: 0.2s ease-out;\n  cursor: pointer;\n  color: #162356;\n  margin: 20px;\n  padding: 12px;\n  font-size: 20px;\n}\n\n.postbtn:hover {\n  transform: scale(94%);\n  background-color: #be1e1e;\n  color: aliceblue;\n}\n.postbtn:active {\n  background-color: #c6f806;\n  transform: scale(90%);\n}\n\n.main {\n  display: grid;\n  gap: 40px;\n  margin-right: 20px;\n  margin-left: 20px;\n  /* height: 90vh; */\n  padding: 40px;\n}\n\nul {\n  list-style: none;\n}\n\n.fact {\n  font-size: 20px;\n  line-height: 1.4;\n  font-family: up;\n  /* font-weight: bold; */\n  color: #162356;\n  background-color: #ff6969;\n  margin-bottom: 20px;\n  border-radius: 30px;\n  padding: 8px 24px; /* vertical horizontal*/\n  display: flex;\n  align-items: center;\n  gap: 24px;\n  letter-spacing: -0.25px;\n}\n\n.fact :first-child {\n  flex-grow: 1;\n}\n\n.votebuttons {\n  margin-left: auto;\n  display: flex;\n  flex-shrink: 0;\n  gap: 8px;\n}\n\n/* .votebuttons button {\n  border: #162356 solid;\n  background-color: aliceblue;\n  font-size: 14px;\n  padding: 5px;\n  padding-bottom: 8px;\n  border-radius: 30px;\n  color: #162356;\n  font-family: up;\n  letter-spacing: 1px;\n  cursor: pointer;\n  transition: 0.25s;\n} */\n.like:hover {\n  background-color: #162356;\n  color: #ffe627;\n  transform: scale(90%);\n  border: #ffe627 solid;\n}\n\n.likeActive {\n  border: #ffe627 solid;\n  background-color: #162356;\n  font-size: 14px;\n  padding: 5px;\n  padding-bottom: 8px;\n  border-radius: 30px;\n  color: #ffe627;\n  font-family: up;\n  letter-spacing: 1px;\n  cursor: pointer;\n  transition: 0.25s;\n}\n\n.like {\n  border: #162356 solid;\n  background-color: aliceblue;\n  font-size: 14px;\n  padding: 5px;\n  padding-bottom: 8px;\n  border-radius: 30px;\n  color: #162356;\n  font-family: up;\n  letter-spacing: 1px;\n  cursor: pointer;\n  transition: 0.25s ease-out;\n}\n\n.mindActive {\n  border: #ffe627 solid;\n  background-color: #162356;\n  font-size: 14px;\n  padding: 5px;\n  padding-bottom: 8px;\n  border-radius: 30px;\n  color: #ffe627;\n  font-family: up;\n  letter-spacing: 1px;\n  cursor: pointer;\n  transition: 0.25s ease-out;\n}\n\n.mind {\n  border: #162356 solid;\n  background-color: aliceblue;\n  font-size: 14px;\n  padding: 5px;\n  padding-bottom: 8px;\n  border-radius: 30px;\n  color: #162356;\n  font-family: up;\n  letter-spacing: 1px;\n  cursor: pointer;\n  transition: 0.25s ease-out;\n}\n\n.mind:hover {\n  background-color: #162356;\n  color: #ffe627;\n  transform: scale(90%);\n  border: #ffe627 solid;\n}\n\n.revokeActive {\n  border: #ffe627 solid;\n  background-color: #162356;\n  font-size: 14px;\n  padding: 5px;\n  padding-bottom: 8px;\n  border-radius: 30px;\n  color: #ffe627;\n  font-family: up;\n  letter-spacing: 1px;\n  cursor: pointer;\n  transition: 0.25s;\n}\n\n.revoke {\n  border: #162356 solid;\n  background-color: aliceblue;\n  font-size: 14px;\n  padding: 5px;\n  padding-bottom: 8px;\n  border-radius: 30px;\n  color: #162356;\n  font-family: up;\n  letter-spacing: 1px;\n  cursor: pointer;\n  transition: 0.25s;\n}\n\n.revoke:hover {\n  background-color: #162356;\n  color: #ffe627;\n  transform: scale(90%);\n  border: #ffe627 solid;\n}\n\n.votebuttons button:disabled {\n  background-color: aliceblue;\n  color: #162356;\n  border: #162356 solid;\n  transform: scale(100%);\n}\n\n.source:link {\n  color: aliceblue;\n  text-decoration: none;\n  margin-left: 12px;\n  transition: 0.4s;\n}\n.source:visited {\n  color: purple;\n}\n.source:hover {\n  color: #ffe627;\n}\n.source:active {\n  color: azure;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -58680,7 +58775,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function App() {
-    // const [showForm, setShowForm] = useState(false);
+    const [showForm, setShowForm] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
     return (react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.BrowserRouter, null,
         react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Routes, null,
             react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Route, { path: "/", element: react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_Login__WEBPACK_IMPORTED_MODULE_3__.Login, null) }),
@@ -58724,10 +58819,10 @@ function FactForm() {
 function Facts() {
     //   const [counter] = useCanister("counter");
     const [data, setData] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]);
-    const [like, setLike] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)();
+    const [click, setClick] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)("L");
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
         fetchData();
-        onLike();
+        // onLike();
     }, []);
     const fetchData = async () => {
         try {
@@ -58738,30 +58833,83 @@ function Facts() {
             console.log(e);
         }
     };
-    const onLike = async () => {
-        try {
-            const res = await _declarations_Nuggets_backend__WEBPACK_IMPORTED_MODULE_0__.Nuggets_backend.like();
-            console.log(res);
-            setLike(res.toString());
-        }
-        catch (e) {
-            console.log(e);
+    // const onLike = () => {
+    //   let a = document.querySelector(".like")
+    //   let b = document.querySelector(".mind")
+    //   let c = document.querySelector(".revoke")
+    //   a.classList.add("likeActive");
+    //   a.classList.remove("like");
+    //   a.disabled = false;
+    //   b.disabled = true;
+    //   c.disabled = true;
+    //   // a.classList.remove("like")
+    //   // setLike("likeActive")
+    // }
+    // const onMind = async () => {
+    //   let a = document.querySelector(".like")
+    //   let b = document.querySelector(".mind")
+    //   let c = document.querySelector(".revoke")
+    //   b.classList.add("mindActive");
+    //   b.classList.remove("mind");
+    //   a.disabled = true;
+    //   b.disabled = false;
+    //   c.disabled = true;
+    // };
+    // const onRevoke = async () => {
+    //   let a = document.querySelector(".like")
+    //   let b = document.querySelector(".mind")
+    //   let c = document.querySelector(".revoke")
+    //   c.classList.add("revokeActive");
+    //   c.classList.remove("revoke");
+    //   a.disabled = true;
+    //   b.disabled = true;
+    //   c.disabled = false;
+    // };
+    const handleButtonClick = (event) => {
+        const button = event.target;
+        const buttonType = button.getAttribute("data-type");
+        if (buttonType === "like" ||
+            buttonType === "mind" ||
+            buttonType === "revoke") {
+            const post = button.closest(".votebuttons");
+            const activeButton = post.querySelector(`.${buttonType}Active`);
+            // const activeButton2 = post.querySelector(`.${buttonType}Active`);
+            if (activeButton) {
+                activeButton.classList.remove(`${buttonType}Active`);
+                activeButton.classList.add(`${buttonType}`);
+            }
+            else {
+                button.classList.add(`${buttonType}Active`);
+                button.classList.remove(`${buttonType}`);
+            }
+            if (buttonType === "like") {
+                post.querySelector(".b").classList.add("mind");
+                post.querySelector(".c").classList.add("revoke");
+                post.querySelector(".b").classList.remove("mindActive");
+                post.querySelector(".c").classList.remove("revokeActive");
+            }
+            else if (buttonType === "mind") {
+                post.querySelector(".a").classList.add("like");
+                post.querySelector(".c").classList.add("revoke");
+                post.querySelector(".a").classList.remove("likeActive");
+                post.querySelector(".c").classList.remove("revokeActive");
+            }
+            else if (buttonType === "revoke") {
+                post.querySelector(".a").classList.add("like");
+                post.querySelector(".b").classList.add("mind");
+                post.querySelector(".a").classList.remove("likeActive");
+                post.querySelector(".b").classList.remove("mindActive");
+            }
         }
     };
     const post = data.map((a) => (react__WEBPACK_IMPORTED_MODULE_1___default().createElement((react__WEBPACK_IMPORTED_MODULE_1___default().Fragment), null,
-        react__WEBPACK_IMPORTED_MODULE_1___default().createElement("li", { className: "fact" },
+        react__WEBPACK_IMPORTED_MODULE_1___default().createElement("li", { className: "fact", key: a.id },
             react__WEBPACK_IMPORTED_MODULE_1___default().createElement("p", null, a.fact),
             react__WEBPACK_IMPORTED_MODULE_1___default().createElement("a", { className: "source", href: "https://" + a.source, target: "_blank" }, "(source)"),
-            react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", { className: "votebuttons" },
-                react__WEBPACK_IMPORTED_MODULE_1___default().createElement("button", null,
-                    "\uD83D\uDC4D ",
-                    react__WEBPACK_IMPORTED_MODULE_1___default().createElement("strong", null, like)),
-                react__WEBPACK_IMPORTED_MODULE_1___default().createElement("button", null,
-                    "\uD83E\uDD2F ",
-                    react__WEBPACK_IMPORTED_MODULE_1___default().createElement("strong", null, "2")),
-                react__WEBPACK_IMPORTED_MODULE_1___default().createElement("button", null,
-                    "\u26D4\uFE0F ",
-                    react__WEBPACK_IMPORTED_MODULE_1___default().createElement("strong", null, "1")))))));
+            react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", { onClick: handleButtonClick, className: "votebuttons" },
+                react__WEBPACK_IMPORTED_MODULE_1___default().createElement("button", { id: "like", className: "like a", "data-type": "like" }, "\uD83D\uDC4D"),
+                react__WEBPACK_IMPORTED_MODULE_1___default().createElement("button", { id: "mind", className: "mind b", "data-type": "mind" }, "\uD83E\uDD2F"),
+                react__WEBPACK_IMPORTED_MODULE_1___default().createElement("button", { id: "revoke", className: "revoke c", "data-type": "revoke" }, "\u26D4\uFE0F"))))));
     return (react__WEBPACK_IMPORTED_MODULE_1___default().createElement("main", { className: "main" },
         react__WEBPACK_IMPORTED_MODULE_1___default().createElement("section", null,
             react__WEBPACK_IMPORTED_MODULE_1___default().createElement("ul", { className: "factslist" }, post))));
@@ -58872,7 +59020,7 @@ const idlFactory = ({ IDL }) => {
     'addPost' : IDL.Func([IDL.Text, IDL.Text], [], ['oneway']),
     'authUser' : IDL.Func([IDL.Text, IDL.Text], [IDL.Text], []),
     'getPosts' : IDL.Func([], [IDL.Vec(Post)], ['query']),
-    'like' : IDL.Func([], [IDL.Int], ['query']),
+    'like' : IDL.Func([IDL.Text], [IDL.Int], ['query']),
   });
 };
 const init = ({ IDL }) => { return []; };

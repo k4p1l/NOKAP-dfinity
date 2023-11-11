@@ -11,5 +11,5 @@ export interface _SERVICE {
   'addPost' : ActorMethod<[string, string], undefined>,
   'authUser' : ActorMethod<[string, string], string>,
   'getPosts' : ActorMethod<[], Array<Post>>,
-  'like' : ActorMethod<[], bigint>,
+  'like' : ActorMethod<[string], bigint>,
 }
