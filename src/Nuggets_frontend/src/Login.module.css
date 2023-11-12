@@ -64,6 +64,7 @@ body {
 
 .input {
   font-family: inter;
+  font-weight: 800;
   padding: 5px;
   height: 150px;
   width: 400px;
@@ -94,6 +95,7 @@ body {
   background-color: #fff5e0;
   color: #162356;
   font-family: inter;
+  font-weight: 800;
   /* box-shadow: 5px 5px 0px 0px #000; */
   transition: 0.2s ease-out;
   cursor: pointer;

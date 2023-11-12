@@ -1,0 +1,13 @@
+type Post = 
+ record {
+   count: int;
+   fact: text;
+   id: text;
+   source: text;
+ };
+service : {
+  addPost: (text, text) -> () oneway;
+  authUser: (text, text) -> (text);
+  getPosts: () -> (vec Post) query;
+  like: (text) -> (int) query;
+}
