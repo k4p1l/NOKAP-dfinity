@@ -47,11 +47,12 @@ const Login = () => {
           placeholder="🔒 Password"
           />
           <center>
-          <Link to="./loader">
+            <Link to="/loader">
           <button className={lf.sign} onClick={onSubmit}>
           Sign In
             </button>
-          </Link></center>
+            </Link>
+          </center>
         
       </div>
     </div>
