@@ -102,6 +102,27 @@ h1 {
   gap: 16px;
   justify-content: center;
   transition: opacity 0.3s ease-in-out;
+  height: auto;
+  min-height: 125px;
+}
+
+.factform textarea {
+  background-color: #ff6969;
+  padding: 20px;
+  border: none;
+  border-radius: 30px;
+  color: aliceblue;
+  font-family: up;
+  font-size: 20px;
+  resize: vertical;
+  width: auto;
+  flex-grow: 1;
+  transition: 0.2s ease-out;
+  
+}
+
+textarea:focus{
+  outline: none;
 }
 
 .factform input {
@@ -112,9 +133,10 @@ h1 {
   color: aliceblue;
   font-family: up;
   font-size: 20px;
-
+  resize: vertical;
   transition: 0.2s ease-out;
 }
+
 
 .factform input:hover {
   box-shadow: 0px 0px 0px 0px #000;
@@ -128,7 +150,7 @@ h1 {
   flex-grow: 1;
 }
 
-.factform input::placeholder {
+.factform input::placeholder,textarea::placeholder {
   color: aliceblue;
   font-size: 20px;
   font-family: up;
@@ -340,7 +362,7 @@ ul {
   transition: 0.4s;
 }
 .source:visited {
-  color: purple;
+  color: aliceblue;
 }
 .source:hover {
   color: #ffe627;

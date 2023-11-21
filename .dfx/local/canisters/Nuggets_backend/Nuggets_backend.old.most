@@ -1,8 +1,5 @@
 // Version: 1.0.0
-type List<T> = ?(T, List<T>);
-type Post = {count : Int; fact : Text; id : Text; source : Text};
 actor {
   stable var idCount : Nat;
-  stable var likeCount : Int;
-  stable var posts : ?(Post, List<Post>)
+  stable var likeCount : Int
 };

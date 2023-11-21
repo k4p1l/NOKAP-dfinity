@@ -20,7 +20,8 @@ const Login = () => {
     if (res === "exists") {
       Nav("/main");
     } else if (res === "not Exists") {
-      alert("No user Found");
+      alert("Please check you password again ☺")
+      Nav("/");
     }
   };
   return (

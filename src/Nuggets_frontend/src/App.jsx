@@ -60,13 +60,15 @@ function FactForm() {
   };
   return (
     <form className="factform">
-      <input
+      <textarea
         id="fact"
+        rows={fact.split('\n').length || 1}
         type="text"
+        style={{ whiteSpace: 'pre-line' }}
         placeholder="Share a fact that you learned mate"
         onChange={(e) => setFact(e.target.value)}
       />
-      <span>{400 - textLength}</span>
+      <span>{1000 - textLength}</span>
       <input id="source" type="text" placeholder="Trustworthy source" />
       <Link to="/loader">
         <button onClick={onSubmit} className="postbtn">
@@ -134,8 +136,8 @@ function Facts() {
   const post = data.map((a) => (
     <>
       <li className="fact" key={a.id}>
-        <p>{a.fact}</p>
-        <a className="source" href={"https://" + a.source} target="_blank">
+        <p style={{ whiteSpace: 'pre-line' }}>{a.fact}</p>
+        <a className="source" href={ a.source} target="_blank">
           (source)
         </a>
         <div onClick={handleButtonClick} className="votebuttons">
