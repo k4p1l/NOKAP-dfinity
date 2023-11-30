@@ -99,7 +99,7 @@ actor {
     // return checkUser;
   };
 
-  public func addPost(factI : Text, sourceI : Text) {
+  public shared({caller}) func addPost(factI : Text, sourceI : Text) {
     idCount := idCount + 1;
     var postNew : Post = {
        
@@ -112,7 +112,7 @@ actor {
     Debug.print(debug_show (posts));
   };
 
-  public query func getPosts() : async [Post] {
+  public  query func getPosts() : async [Post] {
     return List.toArray(posts);
   };
 

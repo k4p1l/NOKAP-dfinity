@@ -1,18 +1,27 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useNavigate, Link } from "react-router-dom";
-import { Nuggets_backend } from "../../declarations/Nuggets_backend";
+import * as Nuggets_backend from "../../declarations/Nuggets_backend";
 import React, { useEffect, useState } from "react";
 import logo from "../../Nuggets_frontend/assets/logo.png";
 import { Login } from "./Login";
 import { Loader } from "./Loader";
+import { createClient } from "@connect2ic/core";
+import { defaultProviders } from "@connect2ic/core/providers";
+import { useCanister } from "@connect2ic/react";
+import {
+  ConnectButton,
+  ConnectDialog,
+  Connect2ICProvider,
+} from "@connect2ic/react";
+import "./connect2ic.css";
 
 function App() {
   const [showForm, setShowForm] = useState(false);
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/main" element={<MainPage />} />
+        <Route path="/" element={<MainPage />} />
+        {/* <Route path="/main" element={<MainPage />} /> */}
         <Route path="/loader" element={<Loader />} />
       </Routes>
     </Router>
@@ -21,6 +30,7 @@ function App() {
 
 function MainPage() {
   const [showForm, setShowForm] = useState(false);
+
   return (
     <>
       <div className="container">
@@ -36,10 +46,14 @@ function Header({ showForm, setShowForm }) {
   return (
     <header className="header">
       <div className="logo">
-        <img src={logo} alt="NOKAP" />
+        {/* <img src={logo} alt="NOKAP" /> */}
         <h1>Nuggets of Knowledge</h1>
       </div>
-
+      {/* Difference 2 */}
+      <div className="auth-section">
+        <ConnectButton />
+      </div>
+      <ConnectDialog />
       <button className="sharebtn" onClick={() => setShowForm((show) => !show)}>
         {showForm ? "Close" : "Share a fact"}
       </button>
@@ -48,6 +62,7 @@ function Header({ showForm, setShowForm }) {
 }
 
 function FactForm() {
+  const [Nuggets_backend] = useCanister("Nuggets_backend");
   const nav = useNavigate();
   const [fact, setFact] = useState("");
   var textLength = fact.length;
@@ -56,20 +71,28 @@ function FactForm() {
     let b = document.getElementById("source");
 
     await Nuggets_backend.addPost(a.value, b.value);
-    nav("/main");
+    nav("/");
   };
   return (
     <form className="factform">
       <textarea
         id="fact"
-        rows={fact.split('\n').length || 1}
+        className="fact-textarea"
+        rows={fact.split("\n").length || 1}
         type="text"
-        style={{ whiteSpace: 'pre-line' }}
+        style={{ whiteSpace: "pre-line" }}
         placeholder="Share a fact that you learned mate"
         onChange={(e) => setFact(e.target.value)}
       />
       <span>{1000 - textLength}</span>
-      <input id="source" type="text" placeholder="Trustworthy source" />
+      <textarea
+        className="source-textarea"
+        rows={fact.split("\n").length || 1}
+        type="text"
+        style={{ whiteSpace: "pre-line" }}
+        id="source"
+        placeholder="Trustworthy source"
+      />
       <Link to="/loader">
         <button onClick={onSubmit} className="postbtn">
           Post
@@ -80,6 +103,7 @@ function FactForm() {
 }
 
 function Facts() {
+  const [Nuggets_backend] = useCanister("Nuggets_backend");
   const [data, setData] = useState([]);
   useEffect(() => {
     fetchData();
@@ -136,8 +160,8 @@ function Facts() {
   const post = data.map((a) => (
     <>
       <li className="fact" key={a.id}>
-        <p style={{ whiteSpace: 'pre-line' }}>{a.fact}</p>
-        <a className="source" href={ a.source} target="_blank">
+        <p style={{ whiteSpace: "pre-line" }}>{a.fact}</p>
+        <a className="source" href={a.source} target="_blank">
           (source)
         </a>
         <div onClick={handleButtonClick} className="votebuttons">
@@ -148,7 +172,7 @@ function Facts() {
             🤯
           </button>
           <button id="revoke" className="revoke c" data-type="revoke">
-            ⛔️
+            👎
           </button>
         </div>
       </li>
@@ -162,4 +186,16 @@ function Facts() {
     </main>
   );
 }
-export default App;
+
+const client = createClient({
+  canisters: {
+    Nuggets_backend,
+  },
+  providers: defaultProviders,
+});
+
+export default () => (
+  <Connect2ICProvider client={client}>
+    <App />
+  </Connect2ICProvider>
+);
