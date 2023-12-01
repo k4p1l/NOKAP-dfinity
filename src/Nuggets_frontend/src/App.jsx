@@ -1,9 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useNavigate, Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import * as Nuggets_backend from "../../declarations/Nuggets_backend";
 import React, { useEffect, useState } from "react";
-import logo from "../../Nuggets_frontend/assets/logo.png";
-import { Login } from "./Login";
 import { Loader } from "./Loader";
 import { createClient } from "@connect2ic/core";
 import { defaultProviders } from "@connect2ic/core/providers";
@@ -43,20 +42,76 @@ function MainPage() {
 }
 
 function Header({ showForm, setShowForm }) {
+  const [mousePosition, setMousePosition] = useState({
+    x: 0,
+    y: 0,
+  });
+  const [cursorVariant, setCursorVariant] = useState("default");
+
+  useEffect(() => {
+    const mouseMove = (e) => {
+      setMousePosition({
+        x: e.clientX,
+        y: e.clientY,
+      });
+    };
+
+    window.addEventListener("mousemove", mouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", mouseMove);
+    };
+  }, []);
+
+  const variants = {
+    default: {
+      x: mousePosition.x - 12,
+      y: mousePosition.y - 12,
+    },
+    text: {
+      height: 150,
+      width: 150,
+      x: mousePosition.x - 75,
+      y: mousePosition.y - 75,
+      backgroundColor: "yellow",
+      mixBlendMode: "difference",
+    },
+  };
+
+  const textEnter = () => setCursorVariant("text");
+  const textLeave = () => setCursorVariant("default");
+
   return (
     <header className="header">
       <div className="logo">
         {/* <img src={logo} alt="NOKAP" /> */}
-        <h1>Nuggets of Knowledge</h1>
+        <h1 onMouseEnter={textEnter} onMouseLeave={textLeave}>
+          Nuggets of Knowledge
+        </h1>
       </div>
       {/* Difference 2 */}
-      <div className="auth-section">
+      <div
+        onMouseEnter={textEnter}
+        onMouseLeave={textLeave}
+        className="auth-section"
+      >
         <ConnectButton />
       </div>
       <ConnectDialog />
-      <button className="sharebtn" onClick={() => setShowForm((show) => !show)}>
+      <button
+        onMouseEnter={textEnter}
+        onMouseLeave={textLeave}
+        className="sharebtn"
+        onClick={() => setShowForm((show) => !show)}
+      >
         {showForm ? "Close" : "Share a fact"}
       </button>
+      <motion.div
+        className="cursor"
+        variants={variants}
+        animate={cursorVariant}
+        transition={{ type: "tween", ease: "backOut" }}
+      />
     </header>
   );
 }
@@ -103,6 +158,45 @@ function FactForm() {
 }
 
 function Facts() {
+  const [mousePosition, setMousePosition] = useState({
+    x: 0,
+    y: 0,
+  });
+  const [cursorVariant, setCursorVariant] = useState("default");
+
+  useEffect(() => {
+    const mouseMove = (e) => {
+      setMousePosition({
+        x: e.clientX,
+        y: e.clientY,
+      });
+    };
+
+    window.addEventListener("mousemove", mouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", mouseMove);
+    };
+  }, []);
+
+  const variants = {
+    default: {
+      x: mousePosition.x - 12,
+      y: mousePosition.y - 12,
+    },
+    text: {
+      height: 50,
+      width: 50,
+      x: mousePosition.x - 25,
+      y: mousePosition.y - 25,
+      backgroundColor: "yellow",
+      mixBlendMode: "difference",
+    },
+  };
+
+  const textEnter = () => setCursorVariant("text");
+  const textLeave = () => setCursorVariant("default");
+
   const [Nuggets_backend] = useCanister("Nuggets_backend");
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -179,9 +273,16 @@ function Facts() {
     </>
   ));
   return (
-    <main className="main">
+    <main  className="main">
       <section>
-        <ul className="factslist">{post}</ul>
+        <ul  onMouseEnter={textEnter}
+          onMouseLeave={textLeave} className="factslist">{post}</ul>
+        <motion.div
+        className="cursor"
+        variants={variants}
+        animate={cursorVariant}
+        transition={{ type: "tween", ease: "backOut" }}
+      />
       </section>
     </main>
   );
