@@ -9,5 +9,5 @@
     "jsx": "react",
     "outDir": "./dist" /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
   },
-  "include": ["src/**/*"]
+  "include": ["src/"]
 }
