@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import lf from "./Login.module.css";
 import { Nuggets_backend } from "../../declarations/Nuggets_backend";
-import { useNavigate,Link } from "react-router-dom";
-import { Loader } from "./Loader";
+import { useNavigate, Link } from "react-router-dom";
+import { Loader } from "./Loader/Loader";
 
 const Login = () => {
   const Nav = useNavigate();
@@ -13,50 +13,48 @@ const Login = () => {
 
     var userNm = u.value;
     var userPass = p.value;
-   
+
     const res = await Nuggets_backend.authUser(userNm, userPass);
-    
 
     if (res === "exists") {
       Nav("/main");
     } else if (res === "not Exists") {
-      alert("Please check you password again ☺")
+      alert("Please check you password again ☺");
       Nav("/");
     }
   };
   return (
-  <>
-    <div className={lf.container}>
-      <div className={lf.header}>
-        <span className={lf.crm}>Nuggets Of Knowledge</span>
-      </div>
-      <div className={lf.main}>
-        <span className={lf.user}>User Admin</span>
-        <span className={lf.login}>Login</span>
-      </div>
-      <div className={lf.field}>
-        <input
-          className={lf.input}
-          id="username"
-          type="text"
-          placeholder="🤵 Username"
-        />
-        <input
-          className={lf.input}
-          id="password"
-          type="password"
-          placeholder="🔒 Password"
+    <>
+      <div className={lf.container}>
+        <div className={lf.header}>
+          <span className={lf.crm}>Nuggets Of Knowledge</span>
+        </div>
+        <div className={lf.main}>
+          <span className={lf.user}>User Admin</span>
+          <span className={lf.login}>Login</span>
+        </div>
+        <div className={lf.field}>
+          <input
+            className={lf.input}
+            id="username"
+            type="text"
+            placeholder="🤵 Username"
+          />
+          <input
+            className={lf.input}
+            id="password"
+            type="password"
+            placeholder="🔒 Password"
           />
           <center>
             <Link to="/loader">
-          <button className={lf.sign} onClick={onSubmit}>
-          Sign In
-            </button>
+              <button className={lf.sign} onClick={onSubmit}>
+                Sign In
+              </button>
             </Link>
           </center>
-        
+        </div>
       </div>
-    </div>
     </>
   );
 };

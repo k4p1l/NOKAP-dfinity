@@ -3,7 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import * as Nuggets_backend from "../../declarations/Nuggets_backend";
 import React, { useEffect, useState } from "react";
-import { Loader } from "./Loader";
+import { Loader } from "./Loader/Loader";
 import { createClient } from "@connect2ic/core";
 import { defaultProviders } from "@connect2ic/core/providers";
 import { useCanister } from "@connect2ic/react";
@@ -20,7 +20,6 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<MainPage />} />
-        {/* <Route path="/main" element={<MainPage />} /> */}
         <Route path="/loader" element={<Loader />} />
       </Routes>
     </Router>
@@ -273,16 +272,21 @@ function Facts() {
     </>
   ));
   return (
-    <main  className="main">
+    <main className="main">
       <section>
-        <ul  onMouseEnter={textEnter}
-          onMouseLeave={textLeave} className="factslist">{post}</ul>
+        <ul
+          onMouseEnter={textEnter}
+          onMouseLeave={textLeave}
+          className="factslist"
+        >
+          {post}
+        </ul>
         <motion.div
-        className="cursor"
-        variants={variants}
-        animate={cursorVariant}
-        transition={{ type: "tween", ease: "backOut" }}
-      />
+          className="cursor"
+          variants={variants}
+          animate={cursorVariant}
+          transition={{ type: "tween", ease: "backOut" }}
+        />
       </section>
     </main>
   );

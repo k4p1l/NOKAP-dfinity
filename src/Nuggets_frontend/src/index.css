@@ -19,7 +19,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  cursor:none;
+  /* cursor:none; */
 }
 
 .auth-section {
@@ -319,7 +319,7 @@ ul {
 }
 
 .cursor {
-  background-color: #37429b;
+  background-color: #2237d6;
   height: 24px;
   width: 24px;
   border-radius: 50%;
