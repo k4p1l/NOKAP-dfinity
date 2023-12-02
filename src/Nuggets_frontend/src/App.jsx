@@ -12,7 +12,7 @@ import {
   ConnectDialog,
   Connect2ICProvider,
 } from "@connect2ic/react";
-import "./connect2ic.css";
+import "../src/Styles/connect2ic.css";
 
 function App() {
   const [showForm, setShowForm] = useState(false);

@@ -1,19 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700;800&family=Staatliches&display=swap");
-
+/* 
 @font-face {
   font-family: BLKND;
   src: url(./fonts/BLKND-SANS.otf);
-}
+} */
 
 @font-face {
   font-family: up;
-  src: url(./fonts/upheavtt.otf);
+  src: url(../fonts/upheavtt.otf);
 }
-
+/* 
 @font-face {
   font-family: milli;
   src: url(./fonts/Fontspring-DEMO-milligrammacro-heavy.otf);
-}
+} */
 
 * {
   padding: 0;
@@ -32,7 +32,7 @@
 
 body {
   background: #eefef5;
-  background-image: url(../../Nuggets_frontend/assets/noise-light.ico);
+  background-image: url(../../assets/noise-light.ico);
 }
 
 .container {
@@ -44,7 +44,7 @@ body {
   padding-top: 1vw;
   background: #eefef5;
   position: relative;
-  background-image: url(../../Nuggets_frontend/assets/noise-light.ico);
+  background-image: url(../../assets/noise-light.ico);
   /* cursor: url('../../Nuggets_frontend/assets/favicon.ico'),auto; */
 }
 
