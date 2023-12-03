@@ -99,11 +99,6 @@ h1 {
   transform: scale(94%);
   box-shadow: none;
 }
-/* .sharebtn:active,
-.postbtn:active {
-  transform: scale(94%);
-  color: white;
-} */
 
 .factform {
   margin-top: 6vh;
@@ -122,6 +117,7 @@ h1 {
   border: none;
   color: #37429b;
   font-family: Inter;
+  font-weight: 800;
   font-size: 1.625vw;
   resize: vertical;
   width: auto;
@@ -180,6 +176,7 @@ textarea::placeholder {
   color: #37429b;
   font-size: 1.625vw;
   font-family: Inter;
+  font-weight: 800;
 }
 
 .factform span {
@@ -327,5 +324,5 @@ ul {
   top: 0;
   left: 0;
   pointer-events: none;
-  mix-blend-mode:hard-light;
+  mix-blend-mode: hard-light;
 }
