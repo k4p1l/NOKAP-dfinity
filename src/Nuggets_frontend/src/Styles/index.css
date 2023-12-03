@@ -1,19 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700;800&family=Staatliches&display=swap");
-/* 
-@font-face {
-  font-family: BLKND;
-  src: url(./fonts/BLKND-SANS.otf);
-} */
-
 @font-face {
   font-family: up;
-  src: url(../fonts/upheavtt.otf);
+  src: url(./upheavtt.otf);
 }
-/* 
-@font-face {
-  font-family: milli;
-  src: url(./fonts/Fontspring-DEMO-milligrammacro-heavy.otf);
-} */
 
 * {
   padding: 0;
