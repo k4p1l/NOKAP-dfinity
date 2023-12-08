@@ -21,7 +21,6 @@ actor {
     id : Int;
     username : { name : Text; id : Int };
     password : { pass : Text; id : Int };
-    // facts : [Post];
     count : Int;
   };
 
@@ -48,20 +47,13 @@ actor {
     }
   ];
 
-  stable var likeCount : Int = 5;
+   var likeCount : Int = 5;
 
-  stable var idCount = 0;
+   var idCount = 0;
 
-  stable var posts : List.List<Post> = List.nil<Post>();
+   var posts : List.List<Post> = List.nil<Post>();
 
   public query func like(id : Text) : async Int {
-
-    // var checkPost = List.find(
-    //   posts,
-    //   func(post : Post) : Bool {
-
-    //   }
-    // )
     return likeCount
   };
 
@@ -96,13 +88,11 @@ actor {
     } else {
       return "exists";
     };
-    // return checkUser;
   };
 
   public shared({caller}) func addPost(factI : Text, sourceI : Text) {
     idCount := idCount + 1;
     var postNew : Post = {
-       
       id = Int.toText(idCount);
       fact = factI;
       source = sourceI;
