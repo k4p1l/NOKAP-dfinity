@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useCanister } from "@connect2ic/react";
 import { motion } from "framer-motion";
+import { FaBookmark } from "react-icons/fa6";
+import { IconContext } from "react-icons";
 
 function Facts() {
   const [mousePosition, setMousePosition] = useState({
@@ -26,14 +28,14 @@ function Facts() {
 
   const variants = {
     default: {
-      x: mousePosition.x - 12,
-      y: mousePosition.y - 12,
+      x: mousePosition.x - 5,
+      y: mousePosition.y - 5,
     },
     text: {
-      height: 50,
-      width: 50,
-      x: mousePosition.x - 25,
-      y: mousePosition.y - 25,
+      height: 20,
+      width: 20,
+      x: mousePosition.x - 10,
+      y: mousePosition.y - 10,
       backgroundColor: "yellow",
       mixBlendMode: "difference",
     },
@@ -108,7 +110,13 @@ function Facts() {
           👍
         </button>
         <button id="mind" className="mind b" data-type="mind">
-          🤯
+          <IconContext.Provider
+            value={{ color: "blue", className: "bookmark-icon" }}
+          >
+            <div>
+              <FaBookmark />
+            </div>
+          </IconContext.Provider>
         </button>
         <button id="revoke" className="revoke c" data-type="revoke">
           👎

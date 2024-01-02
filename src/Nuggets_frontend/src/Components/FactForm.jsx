@@ -27,14 +27,14 @@ function FactForm() {
 
   const variants = {
     default: {
-      x: mousePosition.x - 12,
-      y: mousePosition.y - 12,
+      x: mousePosition.x - 5,
+      y: mousePosition.y - 5,
     },
     text: {
-      height: 80,
-      width: 80,
-      x: mousePosition.x - 40,
-      y: mousePosition.y - 40,
+      height: 50,
+      width: 50,
+      x: mousePosition.x - 25,
+      y: mousePosition.y - 25,
       backgroundColor: "yellow",
       mixBlendMode: "difference",
     },
@@ -66,6 +66,8 @@ function FactForm() {
         style={{ whiteSpace: "pre-line" }}
         placeholder="Share a fact that you learned mate"
         onChange={(e) => setFact(e.target.value)}
+        onMouseEnter={textEnter}
+        onMouseLeave={textLeave}
       />
       <span>{1000 - textLength}</span>
       <textarea
@@ -75,6 +77,8 @@ function FactForm() {
         style={{ whiteSpace: "pre-line" }}
         id="source"
         placeholder="Trustworthy source"
+        onMouseEnter={textEnter}
+        onMouseLeave={textLeave}
       />
       <Link to="/loader">
         <button

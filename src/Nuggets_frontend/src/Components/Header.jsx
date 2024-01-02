@@ -26,15 +26,15 @@ function Header({ showForm, setShowForm }) {
 
   const variants = {
     default: {
-      x: mousePosition.x - 12,
-      y: mousePosition.y - 12,
+      x: mousePosition.x - 5,
+      y: mousePosition.y - 5,
     },
     text: {
       height: 150,
       width: 150,
       x: mousePosition.x - 75,
       y: mousePosition.y - 75,
-      backgroundColor: "yellow",
+      backgroundColor: "#fbd1e1",
       mixBlendMode: "difference",
     },
   };

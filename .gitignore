@@ -11,7 +11,7 @@
 
 
 # generated files
-
+/node_modules
 
 # rust
 target/
